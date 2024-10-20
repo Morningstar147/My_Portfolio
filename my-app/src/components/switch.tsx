@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { useState, ReactNode } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
 
 
@@ -32,16 +32,16 @@ export default function Switch({
           exit="hidden"
           variants={switchVariants}
           transition={{ duration: 0.3 }}
-          className='hidden md:flex items-center justify-center w-[2rem] h-[2rem]'
+          className='hidden md:flex items-center justify-center w-[2rem] h-[2rem] bg-white'
         >
-            <p className="text-sm font-semibold">{hiddenButton}</p>
+          <p className="text-sm font-semibold">{hiddenButton}</p>
         </motion.button>
         )}
       
       </AnimatePresence>
 
       <motion.button
-      className="bg-white w-[3rem] h-[3rem] drop-shadow backdrop-blur-[0.5rem]border"
+      className="bg-white w-[2rem] h-[2rem] drop-shadow backdrop-blur-[0.5rem]border"
       variants={switchVariants}
       initial="visible"
       whileHover="hover"
